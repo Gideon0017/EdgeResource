@@ -225,3 +225,7 @@ p {
     width: 100%;
     padding: 0.5rem;
 }
+
+#contact .contact-form .form-group .recapt {
+    margin-top: 1rem;
+}
