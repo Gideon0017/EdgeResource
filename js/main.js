@@ -37,34 +37,34 @@ $('#navbar a, btn').on('click', function(event) {
     }
 });
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById("contactForm").addEventListener("submit", function(event) {
+//     event.preventDefault(); // Prevent the default form submission
     
-    // Perform client-side validation
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var message = document.getElementById("message").value;
+//     // Perform client-side validation
+//     var name = document.getElementById("name").value;
+//     var email = document.getElementById("email").value;
+//     var phone = document.getElementById("phone").value;
+//     var message = document.getElementById("message").value;
     
-    if (name === "" || email === "" || phone === "" || message === "") {
-      alert("Please fill in all fields.");
-      return;
-    }
+//     if (name === "" || email === "" || phone === "" || message === "") {
+//       alert("Please fill in all fields.");
+//       return;
+//     }
     
-    // Create and send AJAX request
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "process_form.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          alert("Message sent successfully!");
+//     // Create and send AJAX request
+//     var xhr = new XMLHttpRequest();
+//     xhr.open("POST", "process_form.php", true);
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//     xhr.onreadystatechange = function() {
+//       if (xhr.readyState === XMLHttpRequest.DONE) {
+//         if (xhr.status === 200) {
+        //   alert("Message sent successfully!");
           // Optionally, reset the form
-          document.getElementById("contactForm").reset();
-        } else {
-          alert("Oops! Something went wrong.");
-        }
-      }
-    };
-    xhr.send("name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&phone=" + encodeURIComponent(phone) + "&message=" + encodeURIComponent(message));
-  });
+//           document.getElementById("contactForm").reset();
+//         } else {
+//           alert("Oops! Something went wrong.");
+//         }
+//       }
+//     };
+//     xhr.send("name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&phone=" + encodeURIComponent(phone) + "&message=" + encodeURIComponent(message));
+//   });
